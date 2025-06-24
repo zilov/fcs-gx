@@ -7,7 +7,7 @@ alias sortt="sort -t$'\t'"
 which minigzip && alias gzip=$(which minigzip)
 
 inp=$1
-out_dir=gxdb_out
+out_dir=$2
 
 # in GX the maximum seq-id length is 39, but CDS seq-ids in *cds_from_genomic.fna.gz are longer, e.g.
 # lcl|NW_012132914.1_cds_NP_001297063.1_130327
@@ -52,7 +52,7 @@ cat $inp |
     cut -f6                                      |  # assembly-path
     grep -Pv 'from_genomic'                      |  # skip cds_from_genomic and rna_from_genomic
     sed 's/genomic.fna.gz/genomic.gff.gz/'       |
-    xargs -I{} make_gxdb/get_gff_exon_locs.sh {} |
+    xargs -I{} make_gxdb/get_gff_exon_locs.py {} |
     sed '1i##[["GX locs",1,1]]'                  |  # prepend header
     gzip -c > $out_dir/exons.locs.gz
 
