@@ -3,6 +3,7 @@
 
 import gzip
 import sys
+import os
 
 def parse_gff_for_exons(gff_file):
     """
@@ -15,22 +16,23 @@ def parse_gff_for_exons(gff_file):
     open_func = gzip.open if gff_file.endswith('.gz') else open
     mode = 'rt' if gff_file.endswith('.gz') else 'r'
     
-    with open_func(gff_file, mode) as infile:
-        # Process each line
-        for line in infile:
-            # Skip comment lines
-            if line.startswith('#'):
-                continue
+    if os.path.exists(gff_file):
+        with open_func(gff_file, mode) as infile:
+            # Process each line
+            for line in infile:
+                # Skip comment lines
+                if line.startswith('#'):
+                    continue
                 
-            fields = line.strip().split('\t')
-            if len(fields) < 9:
-                continue
+                fields = line.strip().split('\t')
+                if len(fields) < 9:
+                    continue
                 
-            seq_id, source, feature_type, start, end = fields[0:5]
+                seq_id, source, feature_type, start, end = fields[0:5]
             
-            # Extract only exon features
-            if feature_type.lower() == 'exon':
-                print(f"{seq_id}\t{start}\t{end}")
+                # Extract only exon features
+                if feature_type.lower() == 'exon':
+                    print(f"{seq_id}\t{start}\t{end}")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
