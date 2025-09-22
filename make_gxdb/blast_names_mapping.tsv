@@ -6,6 +6,7 @@ metagenomes	unkn:metagenomes
 brown algae	prst:algae
 diatoms	prst:algae
 golden algae	prst:algae
+rhizarians	prst:protists
 green algae	plnt:green algae
 haptophytes	prst:algae
 oomycetes	prst:algae
@@ -51,6 +52,9 @@ hawks & eagles	anml:birds
 brachiopods	anml:brachiopods
 budding yeasts	fung:budding yeasts
 budding yeasts & others	fung:budding yeasts
+budding yeasts & allies	fung:budding yeasts
+rust fungi & allies	fung:fungi
+smut fungi & allies	fung:fungi
 cellular slime molds	prst:cellular slime molds
 cercozoans	prst:cercozoans
 choanoflagellates	prst:choanoflagellates
@@ -70,6 +74,7 @@ echinoderms	anml:echinoderms
 euglenoids	prst:euglenoids
 kinetoplastids	prst:euglenoids
 eukaryotes	prst:protists
+heterokonts	prst:protists
 bony fishes	anml:fishes
 chimaeras	anml:fishes
 hagfishes	anml:fishes
@@ -94,14 +99,17 @@ aphids	anml:insects
 bees	anml:insects
 beetles	anml:insects
 booklice	anml:insects
+booklice, barklice & lice	anml:insects
 bugs	anml:insects
 butterflies	anml:insects
 caddisflies	anml:insects
 centipedes	anml:insects
 crickets	anml:insects
+cockroaches & termites	anml:insects
 cycads	plnt:plants
 grasshoppers, crickets, & katydids	anml:insects
 grasshoppers, crickets, and katydids	anml:insects
+grasshoppers, crickets & katydids	anml:insects
 daddy longlegs	anml:insects
 damselflies	anml:insects
 dragonflies & damselflies	anml:insects
@@ -121,6 +129,7 @@ millipedes	anml:insects
 mites & ticks	anml:insects
 mosquitos	anml:insects
 moths	anml:insects
+moths & butterflies	anml:insects
 psyllids	anml:insects
 roaches	anml:insects
 scale insects	anml:insects
@@ -132,6 +141,7 @@ spiders	anml:insects
 springtails	anml:insects
 stoneflies	anml:insects
 termites	anml:insects
+true bugs	anml:insects
 thrips	anml:insects
 twisted-wing parasites	anml:insects
 walking sticks	anml:insects
@@ -140,6 +150,7 @@ whiteflies	anml:insects
 arthropods	anml:insects
 arachnids	anml:insects
 hooded tickspiders	anml:insects
+harvestmen	anml:insects
 sun spiders	anml:insects
 whip spiders	anml:insects
 web-spinners	anml:insects
@@ -170,6 +181,7 @@ trichomonads	prst:monads
 club-mosses	plnt:mosses
 hornworts	plnt:mosses
 liverworts	plnt:mosses
+clubmosses	plnt:mosses
 mosses	plnt:mosses
 nematodes	anml:nematodes
 eudicots	plnt:plants
